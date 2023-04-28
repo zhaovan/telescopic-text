@@ -1,0 +1,24 @@
+.telescopicText {
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  animation: fadeIn 2s;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.telescopicText:hover {
+  filter: brightness(85%);
+}
+
+.text {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.05;
+  }
+  to {
+    opacity: 1;
+  }
+}
