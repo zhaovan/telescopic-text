@@ -10,7 +10,7 @@ interface Props {
   fadeInSpeed?: number
 }
 
-export const Telescopic = ({
+export const TelescopicText = ({
   children,
   className,
   color = 'aqua',
@@ -52,7 +52,7 @@ export const Telescopic = ({
               </span>
             )
           } else if (typeof child === 'object' && showChildren) {
-            return child
+            return React.cloneElement(child, { color })
           } else {
             return <React.Fragment key={index} />
           }

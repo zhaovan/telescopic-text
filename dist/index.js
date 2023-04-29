@@ -2,7 +2,7 @@ var React = require('react');
 
 var style = {"telescopicText":"_index-module__telescopicText__3Fpcc","fadeIn":"_index-module__fadeIn__3m1CC","text":"_index-module__text__32Dfs"};
 
-var Telescopic = function Telescopic(_ref) {
+var TelescopicText = function TelescopicText(_ref) {
   var children = _ref.children,
     className = _ref.className,
     _ref$color = _ref.color,
@@ -37,7 +37,9 @@ var Telescopic = function Telescopic(_ref) {
         className: hasChildrenObject ? style.telescopicText : style.text
       }, child);
     } else if (typeof child === 'object' && showChildren) {
-      return child;
+      return React.cloneElement(child, {
+        color: color
+      });
     } else {
       return React.createElement(React.Fragment, {
         key: index
@@ -46,5 +48,5 @@ var Telescopic = function Telescopic(_ref) {
   }), ' ');
 };
 
-exports.Telescopic = Telescopic;
+exports.TelescopicText = TelescopicText;
 //# sourceMappingURL=index.js.map

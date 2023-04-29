@@ -5,5 +5,5 @@ interface Props {
     color?: string;
     fadeInSpeed?: number;
 }
-export declare const Telescopic: ({ children, className, color, fadeInSpeed }: Props) => JSX.Element;
+export declare const TelescopicText: ({ children, className, color, fadeInSpeed }: Props) => JSX.Element;
 export {};

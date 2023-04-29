@@ -1,8 +1,8 @@
-import { useState, Children, createElement, Fragment } from 'react';
+import { useState, Children, createElement, cloneElement, Fragment } from 'react';
 
 var style = {"telescopicText":"_index-module__telescopicText__3Fpcc","fadeIn":"_index-module__fadeIn__3m1CC","text":"_index-module__text__32Dfs"};
 
-const Telescopic = ({
+const TelescopicText = ({
   children,
   className,
   color: _color = 'aqua',
@@ -30,7 +30,9 @@ const Telescopic = ({
         className: hasChildrenObject ? style.telescopicText : style.text
       }, child);
     } else if (typeof child === 'object' && showChildren) {
-      return child;
+      return cloneElement(child, {
+        color: _color
+      });
     } else {
       return createElement(Fragment, {
         key: index
@@ -39,5 +41,5 @@ const Telescopic = ({
   }), ' ');
 };
 
-export { Telescopic };
+export { TelescopicText };
 //# sourceMappingURL=index.modern.js.map

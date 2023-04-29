@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
+html {
+  background-color: black;
+  color: white;
+}
 body {
   margin: 0;
   padding: 0;
