@@ -1,16 +1,21 @@
 import { useState, Children, createElement, cloneElement, Fragment } from 'react';
 
-var style = {"telescopicText":"_index-module__telescopicText__3Fpcc","fadeIn":"_index-module__fadeIn__3m1CC","text":"_index-module__text__32Dfs"};
+var style = {"telescopicText":"_3Fpcc","fadeIn":"_3m1CC","text":"_32Dfs"};
 
-const TelescopicText = ({
-  children,
-  className,
-  color: _color = 'aqua',
-  fadeInSpeed: _fadeInSpeed = 2000
-}) => {
-  const [showChildren, setShowChildren] = useState(false);
-  const childrenArray = Children.toArray(children);
-  const hasChildrenObject = childrenArray.some(child => typeof child === 'object');
+var TelescopicText = function TelescopicText(_ref) {
+  var children = _ref.children,
+    className = _ref.className,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? 'aqua' : _ref$color,
+    _ref$fadeInSpeed = _ref.fadeInSpeed,
+    fadeInSpeed = _ref$fadeInSpeed === void 0 ? 2000 : _ref$fadeInSpeed;
+  var _React$useState = useState(false),
+    showChildren = _React$useState[0],
+    setShowChildren = _React$useState[1];
+  var childrenArray = Children.toArray(children);
+  var hasChildrenObject = childrenArray.some(function (child) {
+    return typeof child === 'object';
+  });
   function handleTextClick() {
     if (hasChildrenObject) {
       setShowChildren(true);
@@ -18,20 +23,22 @@ const TelescopicText = ({
   }
   return createElement("span", {
     className: className
-  }, ' ', childrenArray.map((child, index) => {
+  }, ' ', childrenArray.map(function (child, index) {
     if (typeof child === 'string' && !showChildren) {
       return createElement("span", {
         key: index,
-        onClick: () => handleTextClick(),
+        onClick: function onClick() {
+          return handleTextClick();
+        },
         style: {
-          animationDuration: `${_fadeInSpeed}ms`,
-          backgroundColor: hasChildrenObject ? _color : 'none'
+          animationDuration: fadeInSpeed + "ms",
+          backgroundColor: hasChildrenObject ? color : 'none'
         },
         className: hasChildrenObject ? style.telescopicText : style.text
       }, child);
     } else if (typeof child === 'object' && showChildren) {
       return cloneElement(child, {
-        color: _color
+        color: color
       });
     } else {
       return createElement(Fragment, {

@@ -1,20 +1,20 @@
-._index-module__telescopicText__3Fpcc {
+._3Fpcc {
   cursor: pointer;
   transition: all 0.15s ease-out;
-  animation: _index-module__fadeIn__3m1CC 2s;
+  animation: _3m1CC 2s;
   border-radius: 8px;
   padding: 2px 4px;
 }
 
-._index-module__telescopicText__3Fpcc:hover {
+._3Fpcc:hover {
   filter: brightness(85%);
 }
 
-._index-module__text__32Dfs {
-  animation: _index-module__fadeIn__3m1CC 2s;
+._32Dfs {
+  animation: _3m1CC 2s;
 }
 
-@keyframes _index-module__fadeIn__3m1CC {
+@keyframes _3m1CC {
   from {
     opacity: 0.05;
   }

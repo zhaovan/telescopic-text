@@ -1,6 +1,6 @@
 var React = require('react');
 
-var style = {"telescopicText":"_index-module__telescopicText__3Fpcc","fadeIn":"_index-module__fadeIn__3m1CC","text":"_index-module__text__32Dfs"};
+var style = {"telescopicText":"_3Fpcc","fadeIn":"_3m1CC","text":"_32Dfs"};
 
 var TelescopicText = function TelescopicText(_ref) {
   var children = _ref.children,
